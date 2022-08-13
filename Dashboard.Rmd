@@ -1,0 +1,60 @@
+---
+title: "Covied_Test"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+```
+
+Column {data-width=500}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+Wtime
+```
+
+Column {data-width=250}
+-----------------------------------------------------------------------
+
+### Sample Size
+
+```{r}
+valueBox(dim(Data)[1])
+```
+
+
+### Chart B
+
+```{r}
+
+
+```
+
+### Chart C
+
+```{r}
+
+```
+
+Column {data-width=250}
+-----------------------------------------------------------------------
+
+### Chart C
+
+```{r}
+Results
+
+```
+
+### Chart C
+
+```{r}
+
+```
+

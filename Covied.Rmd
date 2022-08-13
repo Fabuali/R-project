@@ -1,0 +1,62 @@
+---
+title: '1'
+output: html_document
+date: "2022-08-12"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+Data <- covid_testing
+glimpse(Data)
+
+```
+
+
+```{r}
+unique(Data$clinic_name)
+unique(Data$gender)
+unique(Data$result)
+unique(Data$patient_class)
+unique(Data$demo_group)
+unique(Data$result)
+```
+## Percenatge of Positive Cases
+
+```{r}
+
+Positive <- Data %>% 
+  group_by(result) %>% 
+  summarise(n=n(),percentage=n()/nrow(Data))
+
+Results <- ggplot(Positive, aes(x="",y=percentage, fill= result))+
+  geom_col()+
+  coord_polar("y", start=0)+
+  theme_bw()
+
+  
+```
+
+
+
+```{r}
+T_p_Clinic <- Data %>% 
+  group_by(patient_class) %>% 
+  mutate(Result_T = col_rec_tat + rec_ver_tat) %>% 
+  summarise(Mean=mean(Result_T))
+
+
+Wtime <- ggplot(T_p_Clinic,aes(x=reorder(patient_class,Mean), y=Mean, fill= Mean))+
+  geom_bar(stat= "identity")+
+  theme(legend.position = "none"
+        ,axis.text.x = element_text(angle = 90,size=5))+
+  labs(title = "Average of Waiting Time per Patient Class",
+       y="Time(Minutes)",
+       x="Class")+
+  coord_flip()+
+  scale_fill_gradient(low="green", high = "red")
+
+```
+
