@@ -66,3 +66,19 @@ Wtime <- ggplot(T_p_Clinic,aes(x=reorder(patient_class,Mean), y=Mean, fill= Mean
 
 ```
 
+### Saving the Datasets
+
+```{r}
+library(here)
+write.csv(Positive,here("Data","Positive.csv"))
+
+write.csv(T_p_Clinic,here("Data","T_p_Clinic.csv"))
+```
+
+### Saving the Images
+
+```{r}
+jpeg(here("Images","Results.jpeg", width=500, height=500))
+png(here("Images","Wtime.png"))
+```
+

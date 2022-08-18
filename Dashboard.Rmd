@@ -25,20 +25,7 @@ Column {data-width=500}
 
 ```{r}
 
-T_p_Clinic <- Data %>% 
-  group_by(patient_class) %>% 
-  mutate(Result_T = col_rec_tat + rec_ver_tat) %>% 
-  summarise(Mean=mean(Result_T))
-
-Wtime <- ggplot(T_p_Clinic,aes(x=reorder(patient_class,Mean), y=Mean, fill= Mean))+
-  geom_bar(stat= "identity")+
-  theme(legend.position = "none"
-        ,axis.text.x = element_text(angle = 90,size=5))+
-  labs(title = "Average of Waiting Time per Patient Class",
-       y="Time(Minutes)",
-       x="Class")+
-  coord_flip()+
-  scale_fill_gradient(low="green", high = "red")
+Wtime
 ```
 
 Column {data-width=250}
@@ -71,14 +58,8 @@ Column {data-width=250}
 
 ```{r}
 
-Positive <- Data %>% 
-  group_by(result) %>% 
-  summarise(n=n(),percentage=n()/nrow(Data))
+Results
 
-Results <- ggplot(Positive, aes(x="",y=percentage, fill= result))+
-  geom_col()+
-  coord_polar("y", start=0)+
-  theme_bw()
 
 ```
 

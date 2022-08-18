@@ -5,7 +5,7 @@ account: fabuali
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 6806507
-bundleId: 6215065
+bundleId: 6215102
 url: https://fabuali.shinyapps.io/dashboard/
-when: 1660848138.80599
-lastSyncTime: 1660848138.80601
+when: 1660848771.32045
+lastSyncTime: 1660848771.32045
