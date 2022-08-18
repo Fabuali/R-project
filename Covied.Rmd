@@ -6,7 +6,13 @@ date: "2022-08-12"
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(medicaldata)
+library(tidyverse)
+library(ggplot2)
+library(here)
+library(rsconnect)
 ```
+
 
 ```{r}
 Data <- covid_testing
