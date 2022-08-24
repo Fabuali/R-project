@@ -1,14 +1,14 @@
+[![DOI](https://sandbox.zenodo.org/badge/524373206.svg)](https://sandbox.zenodo.org/badge/latestdoi/524373206)
+
 # R-project
 
 ## **COVID-19 Testing Analysis**
 
 ### Objective
-The main objective is to apply the new learned knowledge **R Zero to Hero Course** to do some descriptive analysis 
-,that can optimize practicing this new skill,in area that can support public health decision making 
-
+The main objective is to apply the new learned knowledge [R Zero to Hero Course](https://github.com/BatoolMM/from-Zero-to-hero-in-r) to do some descriptive analysis,that can optimize practicing this new skill, in area that can support public health decision making. **You can access the dashboad from [this link](https://fabuali.shinyapps.io/dashboard/
+)**.
 
 ### Data source
-
 This data set is from Amrom E. Obstfeld, who de-identified data on COVID-19 testing during the year 2020 at the Children’s Hospital of Pennsylvania (aka CHOP).
 
 This data set contains data concerning testing for SARS-CoV2 via PCR as well as associated metadata. The data has been anonymized, time-shifted, and permuted.
@@ -22,6 +22,3 @@ Prospective Cross-Sectional Cohort
 N = 15,524 subjects
 17 variables
 
-
-https://fabuali.shinyapps.io/dashboard/
-[![DOI](https://sandbox.zenodo.org/badge/524373206.svg)](https://sandbox.zenodo.org/badge/latestdoi/524373206)
